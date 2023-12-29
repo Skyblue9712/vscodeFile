@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-file_path = r'C:\Users\lenovo\Documents\vscodeFile\supermarket_sales - Sheet1.csv'
+file_path = r'C:\Users\lenovo\Documents\vscodeFile\streamapp.csv'
 df = pd.read_csv(file_path)
 # Set page configuration
 st.set_page_config(page_title="Supermarket Sales Analysis", page_icon=":bar_chart:")
