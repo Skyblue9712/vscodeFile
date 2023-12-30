@@ -12,10 +12,10 @@ st.dataframe(df.head())
 if __name__ == '__main__':
     st.write("Welcome to the Supermarket Sales Analysis App!")
     st.sidebar.title("Navigation")
-    app_mode = st.sidebar.selectbox("Choose the analysis type", ["Overview", "Graphs"])
+    app_mode = st.sidebar.selectbox("Choose the analysis type", ["Original Dataset", "Graphs"])
 
-    if app_mode == "Overview":
-        st.write("## Dataset Overview")
+    if app_mode == "Original Dataset":
+        st.write("## Original Dataset")
         st.dataframe(df)
 
     elif app_mode == "Graphs":
