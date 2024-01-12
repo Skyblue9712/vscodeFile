@@ -47,6 +47,7 @@ if __name__ == '__main__':
             st.subheader("Graph 3: Payment Method Distribution")
             fig3, ax3 = plt.subplots(figsize=(8, 8))
             df['Payment'].value_counts().plot.pie(autopct='%1.1f%%', ax=ax3)
+            plt.legend(df['Payment'])
             st.pyplot(fig3)
 
         elif selected_graph == "Unit Price Distribution by Product Line":
@@ -110,6 +111,7 @@ st.pyplot(fig2)
 st.subheader("Graph 3: Payment Method Distribution")
 fig3, ax3 = plt.subplots(figsize=(8, 8))
 df['Payment'].value_counts().plot.pie(autopct='%1.1f%%', ax=ax3)
+plt.legend(df['Payment'])
 st.pyplot(fig3)
 # Graph 4: Boxplot - Unit price by Product line
 st.subheader("Graph 4: Unit Price Distribution by Product Line")
@@ -120,7 +122,10 @@ st.pyplot(fig4)
 # Graph 5: Histogram - Quantity distribution
 st.subheader("Graph 5: Quantity Distribution")
 fig5, ax5 = plt.subplots(figsize=(10, 6))
-sns.histplot(df['Quantity'], bins=20, kde=True, ax=ax5)
+filter=df.groupby('Product line')['Quantity'].sum().reset_index()
+sns.histplot(filter,x='Product line',y='Quantity',binwidth=2,kde=True,stat='frequency',ax=ax5,fill=True,element='bars',hue='Quantity')
+plt.xticks(rotation=45)
+plt.yticks(range(800,1001,10))
 st.pyplot(fig5)
 # Graph 6: Scatter plot - Unit price vs. Quantity
 st.subheader("Graph 6: Unit Price vs. Quantity")
@@ -141,6 +146,7 @@ st.pyplot(fig8)
 st.subheader("Graph 9: Correlation Matrix")
 numeric_columns = df.select_dtypes(include=['float64', 'int64']).columns
 correlation_matrix = df[numeric_columns].corr()
+correlation_matrix=correlation_matrix.drop(columns='Unit price')
 # Plot the heatmap
 fig9, ax9 = plt.subplots(figsize=(10, 8))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", ax=ax9)
