@@ -1,0 +1,6 @@
+![Screenshot (18)](https://github.com/Skyblue9712/vscodeFile/assets/141704705/d8d4c73b-ee6a-4501-a66e-d47b15bd8241)
+![Screenshot (19)](https://github.com/Skyblue9712/vscodeFile/assets/141704705/c15e27fa-0a9e-46a2-8e5c-d07df46daedb)
+![Screenshot (24)](https://github.com/Skyblue9712/vscodeFile/assets/141704705/22dbbc5d-9dad-4cac-ace0-54062ed68d08)
+![Screenshot (25)](https://github.com/Skyblue9712/vscodeFile/assets/141704705/514dd355-1486-4488-9448-fe9dee696faf)
+![Screenshot (21)](https://github.com/Skyblue9712/vscodeFile/assets/141704705/f291f87f-6786-420d-9a88-7d5f685f315e)
+![Screenshot (22)](https://github.com/Skyblue9712/vscodeFile/assets/141704705/72de6885-d706-4c28-8b73-05f2ce017744)
